@@ -9,9 +9,19 @@ using std::vector;
 using std::cout;
 using std::endl;
 
+PrepPhrase::PrepPhrase(){
+	this->preposition = "";
+	this->object = new Phrase("", vector<string>());
+}
+
 PrepPhrase::PrepPhrase(string prep, Phrase obj){
 	this->preposition = prep;
 	this->object = new Phrase(obj);
+}
+
+PrepPhrase::PrepPhrase(const PrepPhrase& p){
+	this->preposition = p.preposition;
+	this->object = p.object;
 }
 
 PrepPhrase::~PrepPhrase(){
@@ -20,8 +30,8 @@ PrepPhrase::~PrepPhrase(){
 
 void PrepPhrase::print(int offset) {
 	//offset is by default zero
-	cout << string(offset, ' ') << '\\' << preposition << ' ';
-	object->print(offset + 1);
+	cout << string(offset, ' ') << '\\' << preposition;
+	object->print(0);
 	cout << endl;
 }
 

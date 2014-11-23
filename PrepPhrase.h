@@ -14,7 +14,9 @@ class Phrase; //forward declaration
    That is, a preposition followed by a Phrase*/
 class PrepPhrase {
 	public:
+		PrepPhrase(); //temporary empty initializer
 		PrepPhrase(string, Phrase);
+		PrepPhrase(const PrepPhrase&);//copy constructor
 		~PrepPhrase();
 		void print(int offset = 0);
 		void push_back(string);

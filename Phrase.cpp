@@ -15,6 +15,12 @@ Phrase::Phrase(string w, vector<string> m, vector<PrepPhrase> p) {
 	this->prepPhrases = p;
 }
 
+Phrase::Phrase(string w, vector<string> m) {
+	this->word = w;
+	this->modifiers = m;
+	this->prepPhrases = vector<PrepPhrase>();
+}
+
 Phrase::Phrase(const Phrase& p) {
 	this->word = p.word;
 	this->modifiers = p.modifiers;
@@ -38,6 +44,13 @@ int Phrase::length(){
 	return word.length();
 }
 
-void Phrase::addPrepPhrase(PrepPhrase p){
+void Phrase::addPrepPhrase(PrepPhrase& p){
+	//p.print();
+	//PrepPhrase(string("ASDF"), Phrase("w", vector<string>{})).print();
+	//PrepPhrase();
 	prepPhrases.push_back(p);
+	prepPhrases.back().print();
+	//modifiers.push_back("asdf");
+	//cout << "ADDING PREP PHRASE TO " << word << ":" << endl;
+	//prepPhrases.back().print();
 }

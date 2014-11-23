@@ -12,7 +12,7 @@ class HelperFunctions {
 		}
 
 		static bool isModifier(string s) {
-			return s == "a" || s == "the" || s == "an" || s == "quick" || s == "brown" || s == "lazy";
+			return s == "a" || s == "the" || s == "an" || s == "quick" || s == "brown" || s == "lazy" || s == "happily";
 		}
 
 		static bool isPreposition(string s) {

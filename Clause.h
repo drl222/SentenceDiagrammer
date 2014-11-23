@@ -15,6 +15,7 @@ class Clause {
 	private:
 		vector<Phrase> phrases;
 		vector<int> phrasePositions;
+		bool hasPredicateAdjective = false;
 };
 
 #endif
